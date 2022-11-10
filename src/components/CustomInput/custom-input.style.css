@@ -1,0 +1,39 @@
+.custom-input{
+    font-style: normal;
+}
+
+.form-label{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #7F8899;
+}
+
+.form-input{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: none;
+
+    box-sizing: border-box;
+    border: 1px solid #D4D9E2;
+
+    padding: 15px;
+    height: 50px;
+    width: 814px;
+    color: #2B2F43;
+}
+
+.custom-input input{
+    margin: 0;
+}
+.red-circle input{
+    display: none;
+}

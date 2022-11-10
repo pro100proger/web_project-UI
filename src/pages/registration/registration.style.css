@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    background-color: #FBFBFB;
+}
+.registration-page {
+    width: 100%;
+    height: 927px;
+    position: relative;
+}
+
+.registration-left-photo {
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(29, 161, 242, 0.9);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.registration-logo-and-text {
+    width: 180px;
+
+    position: absolute;
+    left: 26%;
+    top: 9%;
+    display: flex;
+    justify-content: center;
+}
+.registration-logo {
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+}
+.registration-logo-text {
+    height: 20px;
+    padding-left: 5px;
+
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    color: #FFFFFF;
+}
+
+.registration-text-beneath{
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    left: 26%;
+    top: 35%;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-align: center;
+    color: #FBFBFB;
+}
+.registration-arrow{
+    position: absolute;
+    top: 94%;
+    left: 89%;
+}
+
+
+
+.right-registration{
+    width: 70%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.registration-position-div{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 720px;
+}
+
+.lets-start{
+    width: 720px;
+    height: 36px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+    padding-bottom: 12px;
+    justify-content: center;
+}
+
+.registration-addition-text{
+    width: 720px;
+    height: 28px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #8692A6;
+
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.registration-form-container .custom-input {
+    padding-bottom: 24px;
+}
+.registration-form-container .form-input {
+    width: 350px;
+}
+.registration-form-container .password-container {
+    width: 350px;
+}
+
+.first-last-name-group{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.email-password-group{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.registration-auxiliary-button-div{
+    padding-bottom: 24px;
+}
+.registration-button-for-link{
+    width: 350px;
+    height: 19px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.07em;
+
+    color: #1DA1F2;
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.registration-button-for-link:hover {
+    color: #8692A6;
+}
+
+.registration-auxiliary-sign-up{
+    display: flex;
+    justify-content: center;
+}
+.registration-button-sign-up{
+    width: 350px;
+    height: 64px;
+
+    color: #FFFFFF;
+    background: #1DA1F2;
+    border-radius: 6px;
+}
+
+
+
