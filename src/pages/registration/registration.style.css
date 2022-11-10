@@ -141,12 +141,20 @@ body {
     justify-content: space-between;
     display: flex;
 }
-.email-password-group{
+.email-group .form-input{
+    width: 100%;
+}
+.passwords-group{
     width: 100%;
     align-items: center;
     justify-content: space-between;
     display: flex;
 }
+.passwords-group .eye{
+    right: 18px;
+    bottom: 40px;
+}
+
 
 .registration-auxiliary-button-div{
     padding-bottom: 24px;

@@ -122,6 +122,9 @@ body{
     padding-bottom: 15px;
 }
 
+.form-container {
+    max-width: 350px;
+}
 .form-container .custom-input {
     padding-bottom: 12px;
 }
@@ -163,5 +166,16 @@ body{
     border-radius: 6px;
 }
 
+
+.input_error {
+    margin: 0;
+    margin-top: 10px;
+    color: #D72130;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+}
 
 
