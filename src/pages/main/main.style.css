@@ -1,0 +1,23 @@
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../../icons/CalculatorBackground.svg");
+}
+
+.main-header-container{
+    width: 100%;
+
+}
+
+.main-filling {
+    width: 80%;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.main-footer-container{
+
+}

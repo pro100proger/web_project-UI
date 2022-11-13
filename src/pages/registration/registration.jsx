@@ -34,7 +34,7 @@ const registration = () => {
             password: user.password,
             confirmPassword: user.confirmPassword
         };
-        axios.post("https://ujp-sports-hub.herokuapp.com/api/v1/password", sendUser, {})
+        axios.post("http://localhost:8671/eureka/registration", sendUser, {})
             .then((response) => {
                 navigate("/login");
             })

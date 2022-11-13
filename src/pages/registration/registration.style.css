@@ -177,6 +177,7 @@ body {
 }
 
 .registration-button-for-link:hover {
+    cursor: pointer;
     color: #8692A6;
 }
 
