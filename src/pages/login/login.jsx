@@ -21,29 +21,26 @@ const login = () => {
         setErrors({...errors, [name]: ''});
     };
 
-    function loginUser(user) {
+    async function loginUser(user) {
         console.log("loginUser");
         const sendUser = {
             email: user.email,
             password: user.password
         };
-        axios.post("http://localhost:8671/eureka/login", sendUser, {})
-            .then((response) => {
-                localStorage.setItem('user', JSON.stringify(response.data))
-                navigate("/");
-            })
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response);
-                    console.log("error.response.status: ", error.response.status);
-                }
-            });
+        try {
+            const response = await axios.post("http://localhost:8765/login", sendUser)
+            localStorage.setItem('user', JSON.stringify(response.data))
+        } catch(error) {
+            console.log(error.message)
+            console.log("error")
+        }
     }
 
     const handleClick = event => {
         event.preventDefault()
         if (isValid()) {
             loginUser(user)
+            navigate("/main");
         } else {
             console.log(errors);
         }
@@ -74,6 +71,7 @@ const login = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
+
     function registration() {
         navigate("/registration");
     }

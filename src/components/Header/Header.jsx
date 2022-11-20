@@ -6,6 +6,7 @@ const Header = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
+
     function main() {
         navigate("/main");
     }
@@ -14,6 +15,11 @@ const Header = () => {
     }
     function history() {
         navigate("/history");
+    }
+
+    const handleClick = () => {
+        localStorage.removeItem('user')
+        navigate("/login");
     }
 
     return (
@@ -48,7 +54,7 @@ const Header = () => {
 
             <div className={"header-auxiliary-container-3"}>
                 <div className={"header-correct-button"}>
-                    <div className={"header-log-out"}>
+                    <div className={"header-log-out"} onClick={handleClick}>
                         log out
                     </div>
                 </div>
