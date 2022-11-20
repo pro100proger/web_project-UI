@@ -4,7 +4,7 @@ body {
 }
 .registration-page {
     width: 100%;
-    height: 927px;
+    height: 100vh;
     position: relative;
 }
 
@@ -177,6 +177,7 @@ body {
 }
 
 .registration-button-for-link:hover {
+    cursor: pointer;
     color: #8692A6;
 }
 

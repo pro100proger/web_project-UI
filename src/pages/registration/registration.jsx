@@ -10,6 +10,9 @@ import axios from "axios";
 
 const registration = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigate = useNavigate();
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [user, setUser] = useState({
         firstName: "",
         lastName: "",
@@ -31,12 +34,10 @@ const registration = () => {
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            password: user.password,
-            confirmPassword: user.confirmPassword
+            password: user.password
         };
-        axios.post("https://ujp-sports-hub.herokuapp.com/api/v1/password", sendUser, {})
+        axios.post("http://localhost:8765/api/v1/registration", sendUser)
             .then((response) => {
-                navigate("/login");
             })
             .catch((error) => {
                 if (error.response) {
@@ -50,6 +51,7 @@ const registration = () => {
         event.preventDefault()
         if (isValid()) {
             registerUser(user)
+            login()
         } else {
             console.log(errors);
         }
@@ -87,8 +89,6 @@ const registration = () => {
     }
 
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const navigate = useNavigate();
     function login() {
         navigate("/login");
     }

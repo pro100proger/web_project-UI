@@ -4,7 +4,7 @@ import PasswordInput from "../../components/PasswordInput/PasswordInput";
 import {ReactComponent as Arrow} from "../../icons/Arrow.svg";
 import {ReactComponent as Calculator} from "../../icons/Calculator.svg";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import axios from "axios";
 
 const login = () => {
@@ -21,29 +21,26 @@ const login = () => {
         setErrors({...errors, [name]: ''});
     };
 
-    function loginUser(user) {
+    async function loginUser(user) {
         console.log("loginUser");
         const sendUser = {
             email: user.email,
             password: user.password
         };
-        axios.post("https://ujp-sports-hub.herokuapp.com/api/v1/password", sendUser, {})
-            .then((response) => {
-                localStorage.setItem('user', JSON.stringify(response.data))
-                navigate("/");
-            })
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response);
-                    console.log("error.response.status: ", error.response.status);
-                }
-            });
+        try {
+            const response = await axios.post("http://localhost:8765/login", sendUser)
+            localStorage.setItem('user', JSON.stringify(response.data))
+        } catch(error) {
+            console.log(error.message)
+            console.log("error")
+        }
     }
 
     const handleClick = event => {
         event.preventDefault()
         if (isValid()) {
             loginUser(user)
+            navigate("/main");
         } else {
             console.log(errors);
         }
@@ -51,7 +48,7 @@ const login = () => {
 
     const validateInput = data => {
         let errors = {}
-        if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             .test(data.email)) {
             errors.email = "Please enter valid email"
         }
@@ -74,6 +71,7 @@ const login = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
+
     function registration() {
         navigate("/registration");
     }
