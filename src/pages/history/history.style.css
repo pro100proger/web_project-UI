@@ -1,0 +1,35 @@
+.history-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.history-header-container {
+    width: 100%;
+
+}
+
+.history-auxiliary-container {
+    width: 80%;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.history-auxiliary-text-container {
+    margin-top: 50px;
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #1DA1F2;
+}
+
+.history-text {
+    font-size: 20px;
+    line-height: 38px;
+
+    margin-bottom: 20px;
+}

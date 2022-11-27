@@ -33,6 +33,7 @@ const Calculator = () => {
     }
 
     const handleChange = ({target: {name, value}}) => {
+        if (value > 10) return
         setPermutation({...permutation, [name]: value});
     };
 
@@ -62,9 +63,11 @@ const Calculator = () => {
         })
             .then((response) => {
                 const data = response.data;
-                setInterfaces([...interfaces, {...permutation,
+                setInterfaces([...interfaces, {
+                    ...permutation,
                     id: data.id,
-                    start_calculation: data.startCalculation.substring(0, 19)}])
+                    start_calculation: data.startCalculation.substring(0, 19)
+                }])
                 console.log(response.data)
             })
             .catch((error) => {
@@ -77,72 +80,76 @@ const Calculator = () => {
 
     return (
         <div className={"calculator-container"}>
-            <div className={"calculator-header-container"}>
-                <Header/>
-            </div>
+            <div>
+                <div className={"calculator-header-container"}>
+                    <Header/>
+                </div>
 
-            <div className={"calculator-auxiliary-container"}>
-                <div className={"calculator-auxiliary-text-container"}>
-                    <div className={"calculator-text"}>
-                        Please enter the sequence of numbers in the appropriate field, then click the "Calculate" button
-                        and wait.
-                    </div>
-
-                    <div className={"calculator-interface"}>
-                        <div className={"calculator-interface-1"}>
-                            <input
-                                className="calculator-input"
-                                name={"data"}
-                                value={permutation.data}
-                                placeholder={"Enter characters"}
-                                onChange={handleChange}
-                                ref={ref}
-                                disabled={inProgressTasks > 5}
-                            />
-                            <CustomResultText
-                                resultValue={permutation.data.length}
-                                label={"Number of characters: "}
-                            />
-                            <CustomResultText
-                                resultValue={permutation.data ? factorial(permutation.data.length) : 0}
-                                label={"Number of permutations: "}
-                            />
-
-
-                            <button className={"calculator-button-calculate"}
-                                    onClick={handleSubmit}
-                                    disabled={inProgressTasks > 5}>
-                                Calculate
-                            </button>
+                <div className={"calculator-auxiliary-container"}>
+                    <div className={"calculator-auxiliary-text-container"}>
+                        <div className={"calculator-text"}>
+                            Please enter the sequence of numbers in the appropriate field, then click the "Calculate"
+                            button
+                            and wait.
                         </div>
-                        <div className={"calculator-interface-2"}>
-                            <CustomResultText
-                                resultValue={"..."}
-                                label={"Start time: "}
-                            />
-                            <CustomResultText
-                                resultValue={"..."}
-                                label={"End time: "}
-                            />
-                            <CustomResultText
-                                resultValue={"..."}
-                                label={"Duration: "}
-                            />
-                            <div className={"calculator-circles"}>
-                                <div className={"calculator-yellow-circle"}/>
-                                <div className={"calculator-green-circle"}/>
+
+                        <div className={"calculator-interface"}>
+                            <div className={"calculator-interface-1"}>
+                                <input
+                                    className="calculator-input"
+                                    name={"data"}
+                                    value={permutation.data}
+                                    placeholder={"Enter characters"}
+                                    onChange={handleChange}
+                                    ref={ref}
+                                    disabled={inProgressTasks > 5}
+
+                                />
+                                <CustomResultText
+                                    resultValue={permutation.data.length}
+                                    label={"Number of characters: "}
+                                />
+                                <CustomResultText
+                                    resultValue={permutation.data ? factorial(permutation.data.length) : 0}
+                                    label={"Number of permutations: "}
+                                />
+
+
+                                <button className={"calculator-button-calculate"}
+                                        onClick={handleSubmit}
+                                        disabled={inProgressTasks > 5}>
+                                    Calculate
+                                </button>
+                            </div>
+                            <div className={"calculator-interface-2"}>
+                                <CustomResultText
+                                    resultValue={"..."}
+                                    label={"Start time: "}
+                                />
+                                <CustomResultText
+                                    resultValue={"..."}
+                                    label={"End time: "}
+                                />
+                                <CustomResultText
+                                    resultValue={"..."}
+                                    label={"Duration: "}
+                                />
+                                <div className={"calculator-circles"}>
+                                    <div className={"calculator-yellow-circle"}/>
+                                    <div className={"calculator-green-circle"}/>
+                                </div>
                             </div>
                         </div>
+
+                        {interfaces.map((interface_, index) => <CustomInterface
+                            id={interface_.id}
+                            data={interface_.data}
+                            start_calculation={interface_.start_calculation}
+                            decreasedInProgressTasks={decreasedInProgressTasks}
+                            key={index}
+                        />)}
+
                     </div>
-
-                    {interfaces.map((interface_, index) => <CustomInterface
-                        id={interface_.id}
-                        data={interface_.data}
-                        start_calculation={interface_.start_calculation}
-                        decreasedInProgressTasks={decreasedInProgressTasks}
-                        key={index}
-                    />)}
-
                 </div>
             </div>
 
