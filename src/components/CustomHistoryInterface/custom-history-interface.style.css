@@ -1,0 +1,32 @@
+.history-interface-container {
+    font-size: 18px;
+
+    margin: 0 auto;
+    max-width: 80%;
+    color: #8692A6;
+    border-radius: 1%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    background-color: #F3F3F3;
+}
+
+.history-interface-interface {
+
+}
+
+.history-interface-interface-1 {
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.history-interface-interface-2 {
+    padding: 0 130px 10px 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
