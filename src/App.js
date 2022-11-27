@@ -4,6 +4,7 @@ import Login from './pages/login/login';
 import Registration from './pages/registration/registration';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Main from "./pages/main/main";
+import Calculator from "./pages/calculator/Calculator";
 
 function App() {
     return (
@@ -14,7 +15,7 @@ function App() {
                         <Route path="login" element={<Login/>}/>
                         <Route path="registration" element={<Registration/>}/>
                         <Route path="main" element={<Main/>}/>
-                        {/*<Route path="calculator" element={<Calculator/>}/>*/}
+                        <Route path="calculator" element={<Calculator/>}/>
                         {/*<Route path="history" element={<History/>}/>*/}
                     </Route>
                 </Routes>

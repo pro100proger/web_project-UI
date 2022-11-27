@@ -30,6 +30,7 @@ const login = () => {
         try {
             const response = await axios.post("http://localhost:8765/login", sendUser)
             localStorage.setItem('user', JSON.stringify(response.data))
+            navigate("/main");
         } catch(error) {
             console.log(error.message)
             console.log("error")
@@ -40,7 +41,7 @@ const login = () => {
         event.preventDefault()
         if (isValid()) {
             loginUser(user)
-            navigate("/main");
+
         } else {
             console.log(errors);
         }
