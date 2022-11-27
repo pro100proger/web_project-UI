@@ -1,0 +1,114 @@
+.calculator-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calculator-header-container {
+    width: 100%;
+
+}
+
+.calculator-auxiliary-container {
+    width: 80%;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.calculator-auxiliary-text-container {
+    margin-top: 50px;
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #1DA1F2;
+}
+
+.calculator-text {
+    font-size: 20px;
+    line-height: 38px;
+
+    margin-bottom: 20px;
+}
+
+.calculator-interface {
+    font-size: 18px;
+
+    margin: 0 auto;
+    max-width: 80%;
+    color: #8692A6;
+    border-radius: 1%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    background-color: #F3F3F3;
+}
+
+.calculator-input {
+    width: 185px;
+    height: 26px;
+    border: 1px solid #D4D4D4;
+    color: #8692A6;
+}
+
+.calculator-button-calculate {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 10%;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #1DA1F2;
+    cursor: pointer;
+}
+
+.calculator-interface-1 {
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.calculator-interface-2 {
+    padding: 0 10px 10px 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.calculator-circles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator-yellow-circle {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #C1C5CB;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.calculator-green-circle {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #C1C5CB;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.calculator-footer-container {
+
+}

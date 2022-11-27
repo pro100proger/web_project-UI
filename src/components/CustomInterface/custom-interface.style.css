@@ -1,0 +1,77 @@
+.custom-interface-container {
+    font-size: 18px;
+
+    margin: 0 auto;
+    max-width: 80%;
+    color: #8692A6;
+    border-radius: 1%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    background-color: #F3F3F3;
+}
+
+.custom-interface-input {
+    width: 200px;
+    height: 26px;
+    border: 1px solid #D4D4D4;
+    color: #8692A6;
+}
+
+.custom-interface-button-space {
+    width: 100px;
+}
+
+.custom-interface-circles {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.custom-interface-yellow-circle {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #C1C5CB;
+    background-color: #FFFF56;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.custom-interface-empty-circle {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #C1C5CB;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.custom-interface-green-circle {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #C1C5CB;
+    background-color: #A8FF50;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.custom-interface-interface-1 {
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.custom-interface-interface-2 {
+    padding: 0 10px 10px 10px;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+

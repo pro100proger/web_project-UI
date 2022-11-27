@@ -1,0 +1,7 @@
+.result-container {
+    display: flex;
+}
+
+.result-label {
+    margin-right: 10px;
+}
